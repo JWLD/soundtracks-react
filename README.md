@@ -8,7 +8,7 @@
 **As a user interested in a composer**
 > I want to be able to search for an artist
 
-> So that I can access that artist's albums on the website
+> So that I can choose an artist featured on the website
 
 **As a user who has found an artist on the website**
 > I want to see a list of all of that artist's albums
