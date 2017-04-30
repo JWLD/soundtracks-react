@@ -19,3 +19,14 @@
 > I want to be able to listen to that album on Spotify
 
 > So that I can enjoy some sick beats
+
+### Tech Stack
+- React
+- Redux
+- React-router
+- Express
+- PostgreSQL
+
+### Design Principles
+- Mobile-first
+- ES6
