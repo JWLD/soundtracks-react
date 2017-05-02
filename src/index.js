@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
-import './style/index.css';
+import LandingView from './components/view_landing';
+import './assets/style/index.css';
 
 ReactDOM.render(
-  <App />,
+  <LandingView />,
   document.getElementById('root')
 );
