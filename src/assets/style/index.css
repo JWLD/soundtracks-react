@@ -1,6 +1,6 @@
 /* RESET */
 
-body, header, h1, input {
+body, header, h1, input, button, svg, div {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,6 +20,10 @@ header {
 body {
   min-height: 100vh;
   background-color: #21252b;
+}
+
+button:hover, a:hover {
+  cursor: pointer;
 }
 
 /* FONTS */
