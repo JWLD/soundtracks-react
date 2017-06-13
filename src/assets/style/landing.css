@@ -43,6 +43,10 @@ div {
   border-radius: 100%;
 }
 
+.page-hdr__reset:hover {
+  cursor: pointer;
+}
+
 .page-hdr__reset_hide {
   display: none;
 }

@@ -13,6 +13,7 @@ class SearchBar extends Component {
 
     // bind onInputChange to this class
     this.onInputChange = this.onInputChange.bind(this);
+    this.resetInput = this.resetInput.bind(this);
   }
 
   onInputChange(event) {
@@ -25,6 +26,13 @@ class SearchBar extends Component {
     }
   }
 
+  resetInput() {
+    this.setState({
+      term: '',
+      className: 'fa fa-close page-hdr__reset page-hdr__reset_hide'
+    });
+  }
+
   render() {
     return (
       <div>
@@ -35,7 +43,10 @@ class SearchBar extends Component {
           placeholder='Search for Composer'
         />
         <div className='page-hdr__reset-wrap'>
-          <FaClose className={this.state.className} />
+          <FaClose
+            className={this.state.className}
+            onClick={this.resetInput}
+          />
         </div>
       </div>
     );

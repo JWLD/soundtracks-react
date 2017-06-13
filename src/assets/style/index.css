@@ -22,6 +22,10 @@ body {
   background-color: #21252b;
 }
 
+button:hover, a:hover {
+  cursor: pointer;
+}
+
 /* FONTS */
 
 @font-face {
