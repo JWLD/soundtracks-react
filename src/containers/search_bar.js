@@ -13,6 +13,7 @@ class SearchBar extends Component {
 
     // bind onInputChange to this class
     this.onInputChange = this.onInputChange.bind(this);
+    this.onInputSubmit = this.onInputSubmit.bind(this);
     this.resetInput = this.resetInput.bind(this);
   }
 
@@ -23,6 +24,12 @@ class SearchBar extends Component {
       this.setState({ className: 'fa fa-close page-hdr__reset' });
     } else {
       this.setState({ className: 'fa fa-close page-hdr__reset page-hdr__reset_hide' });
+    }
+  }
+
+  onInputSubmit(event) {
+    if (event.target.value && event.key === 'Enter') {
+      console.log(event.target.value);
     }
   }
 
@@ -40,6 +47,7 @@ class SearchBar extends Component {
           className='page-hdr__input'
           value={this.state.term}
           onChange={this.onInputChange}
+          onKeyDown={this.onInputSubmit}
           placeholder='Search for Composer'
         />
         <div className='page-hdr__reset-wrap'>
