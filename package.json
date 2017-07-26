@@ -1,19 +1,49 @@
 {
-  "name": "3_soundtracks",
-  "version": "0.1.0",
-  "private": true,
+  "name": "soundtracks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "dev": "nodemon server/start.js"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JWLD/soundtracks-react.git"
+  },
+  "author": "Jack Davies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JWLD/soundtracks-react/issues"
+  },
+  "homepage": "https://github.com/JWLD/soundtracks-react#readme",
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-icons": "^2.2.5"
+    "axios": "^0.16.2",
+    "env2": "^2.2.0",
+    "express": "^4.15.3",
+    "pg": "^6.4.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-icons": "^2.2.5",
+    "redux": "^3.7.1"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
-  },
-  "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
   }
 }

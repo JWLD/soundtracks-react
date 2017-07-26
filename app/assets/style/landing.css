@@ -3,6 +3,8 @@ div {
   height: 100%;
 }
 
+/* PAGE HEADER */
+
 .page-hdr {
   position: relative;
   height: 72px;
@@ -49,4 +51,40 @@ div {
 
 .page-hdr__reset_hide {
   display: none;
+}
+
+/* RESULTS SECTION */
+
+.results-sctn ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.results-sctn__artist-btn {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background-color: #333;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px -5px black;
+  font: 23px Dense;
+  color: #eee;
+  margin: 8px;
+  background-size: cover;
+}
+
+.results-sctn__artist-btn:hover .results-sctn__artist-hover {
+  display: flex;
+}
+
+.results-sctn__artist-hover {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
 }

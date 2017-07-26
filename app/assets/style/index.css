@@ -1,6 +1,6 @@
 /* RESET */
 
-body, header, h1, input, button, svg, div {
+body, header, h1, input, button, svg, div, ul {
   margin: 0;
   padding: 0;
   border: 0;

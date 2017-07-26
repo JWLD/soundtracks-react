@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import FaClose from 'react-icons/lib/fa/close';
 
-class SearchBar extends Component {
-  // assign initial state
+export default class SearchBar extends Component {
   constructor(props) {
     super(props);
 
@@ -11,34 +10,30 @@ class SearchBar extends Component {
       className: 'fa fa-close page-hdr__reset page-hdr__reset_hide'
     };
 
-    // bind onInputChange to this class
     this.onInputChange = this.onInputChange.bind(this);
-    this.onInputSubmit = this.onInputSubmit.bind(this);
     this.resetInput = this.resetInput.bind(this);
-  }
+  };
 
-  onInputChange(event) {
-    this.setState({ term: event.target.value });
+  onInputChange(term) {
+    this.setState({ term });
 
-    if (event.target.value) {
+    if (term) {
       this.setState({ className: 'fa fa-close page-hdr__reset' });
     } else {
       this.setState({ className: 'fa fa-close page-hdr__reset page-hdr__reset_hide' });
     }
-  }
 
-  onInputSubmit(event) {
-    if (event.target.value && event.key === 'Enter') {
-      console.log(event.target.value);
-    }
-  }
+    this.props.onSearchTermChange(term);
+  };
 
   resetInput() {
     this.setState({
       term: '',
       className: 'fa fa-close page-hdr__reset page-hdr__reset_hide'
     });
-  }
+
+    this.props.clearResults();
+  };
 
   render() {
     return (
@@ -46,9 +41,8 @@ class SearchBar extends Component {
         <input
           className='page-hdr__input'
           value={this.state.term}
-          onChange={this.onInputChange}
-          onKeyDown={this.onInputSubmit}
-          placeholder='Search for Composer'
+          onChange={(event) => this.onInputChange(event.target.value)}
+          placeholder='Search'
         />
         <div className='page-hdr__reset-wrap'>
           <FaClose
@@ -58,7 +52,5 @@ class SearchBar extends Component {
         </div>
       </div>
     );
-  }
+  };
 };
-
-export default SearchBar;
