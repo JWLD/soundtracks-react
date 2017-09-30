@@ -63,8 +63,8 @@ div {
 
 .results-sctn__artist-btn {
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: calc((100vw - (9 * 16px)) / 8);
+  width: calc((100vw - (9 * 16px)) / 8);
   background-color: #333;
   border-radius: 2px;
   box-shadow: 0 5px 15px -5px black;
