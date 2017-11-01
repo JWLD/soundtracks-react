@@ -3,7 +3,6 @@ import Axios from 'axios';
 
 import SearchBar from '../components/search_bar';
 import ResultsList from '../components/results_list';
-import '../assets/style/landing.css';
 
 class LandingView extends Component {
   constructor(props) {
@@ -18,6 +17,10 @@ class LandingView extends Component {
     this.getAlbums = this.getAlbums.bind(this);
     this.clearResults = this.clearResults.bind(this);
   };
+
+  componentDidMount() {
+    this.searchArtists('');
+  }
 
   searchArtists(term) {
     const request = Axios.get(`/api/artists?q=${term}`);

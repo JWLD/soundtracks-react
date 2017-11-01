@@ -9,7 +9,7 @@ dbQueries.searchArtists = (connPool, data, callback) => {
 
 dbQueries.getAlbums = (connPool, data, callback) => {
   connPool.query(
-    `SELECT * FROM albums WHERE artist_id = ${data} ORDER BY year`,
+    `SELECT * FROM albums WHERE artist_id = ${data} AND skipped = false AND spotify_img IS NOT NULL ORDER BY year`,
     callback
   );
 }

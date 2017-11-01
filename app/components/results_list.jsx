@@ -15,7 +15,6 @@ export default class ResultsList extends Component {
   };
 
   renderArtists() {
-    console.log(this.props.results);
     if (this.props.results) {
       return this.props.results.map((result) => {
         return (
