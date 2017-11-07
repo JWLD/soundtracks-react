@@ -13,7 +13,7 @@ export function setSearchTerm(searchTerm) {
   };
 }
 
-export function setArtists(response) {
+export function setResults(response) {
   return {
     type: SET_RESULTS,
     payload: response
