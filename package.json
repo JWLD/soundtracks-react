@@ -2,10 +2,11 @@
   "name": "soundtracks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/start.js",
   "scripts": {
-    "start": "webpack",
-    "dev": "webpack-dev-server --open"
+    "start": "npm run server & webpack --watch",
+    "dev": "npm run server & webpack-dev-server",
+    "server": "nodemon server/start.js"
   },
   "babel": {
     "presets": [
@@ -31,6 +32,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-icons": "^2.2.5",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.1"
   },
   "devDependencies": {
