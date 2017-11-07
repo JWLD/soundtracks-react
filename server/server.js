@@ -4,6 +4,6 @@ const router = require('./controllers/router.js');
 
 const app = express();
 
-app.use('/api', router);
+app.use(router);
 
 module.exports = app;

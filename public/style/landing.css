@@ -3,6 +3,12 @@ div {
   height: 100%;
 }
 
+/* GENERAL */
+
+.hide {
+  display: none;
+}
+
 /* PAGE HEADER */
 
 .page-hdr {
@@ -36,7 +42,7 @@ div {
   padding: 25px 0;
 }
 
-.page-hdr__reset {
+.page-hdr__reset-btn {
   height: 20px;
   width: 20px;
   padding: 3px 3px 4px 3px;
@@ -45,12 +51,8 @@ div {
   border-radius: 100%;
 }
 
-.page-hdr__reset:hover {
+.page-hdr__reset-btn:hover {
   cursor: pointer;
-}
-
-.page-hdr__reset_hide {
-  display: none;
 }
 
 /* RESULTS SECTION */
