@@ -3,7 +3,6 @@
 export const SET_SEARCH_TERM = 'SET_SEARCH_TERM';
 export const SET_RESULTS = 'SET_RESULTS';
 
-
 // ACTION CREATORS
 
 export function setSearchTerm(searchTerm) {
@@ -13,9 +12,9 @@ export function setSearchTerm(searchTerm) {
   };
 }
 
-export function setResults(response) {
+export function setResults(results) {
   return {
     type: SET_RESULTS,
-    payload: response
+    payload: results
   }
 }

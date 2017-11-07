@@ -2,7 +2,8 @@ import { SET_SEARCH_TERM, SET_RESULTS } from './actions';
 
 const initialState = {
   searchTerm: '',
-  results: []
+  resultType: '',
+  results: [],
 };
 
 const setSearchTerm = (state, action) => {
@@ -10,7 +11,7 @@ const setSearchTerm = (state, action) => {
 };
 
 const setResults = (state, action) => {
-  return Object.assign({}, state, { results: action.payload });
+  return Object.assign({}, state, { resultType: action.payload.type, results: action.payload.data });
 };
 
 const rootReducer = (state = initialState, action) => {

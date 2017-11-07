@@ -10,36 +10,58 @@ class ResultsList extends Component {
   }
 
   render() {
+    let resultsList;
+
+    if (this.props.resultType === 'artist') {
+      resultsList = this.props.results
+        .filter(result => result.name.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0)
+        .map(result => (
+          <button
+            key={result.id}
+            className="results-sctn__result-tile"
+            onClick={() => this.props.getAlbumsByArtist(result.discogs_id)}
+          >
+            {result.name}
+          </button>
+        ));
+    } else {
+      resultsList = this.props.results.map(result => {
+        const tileStyle = { backgroundImage: `url(${result.spotify_img})` };
+
+        return (
+          <button
+            className="results-sctn__result-tile"
+            key={result.id}
+            style={tileStyle}
+            >
+              <div className="results-sctn__result-hover">{result.title}</div>
+            </button>
+        );
+      });
+    }
+
     return (
-      <ul>
-        {this.props.results
-          .filter(result => result.name.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0)
-          .map(result => (
-            <button
-              key={result.id}
-              className="results-sctn__result-tile"
-              // onClick={() => this.props.getAlbumsByArtist(result.discogs_id)}
-            >{result.name}</button>))}
-      </ul>
+      <ul>{resultsList}</ul>
     )
   }
 };
 
 const mapStateToProps = (state) => ({
   searchTerm: state.searchTerm,
+  resultType: state.resultType,
   results: state.results
 });
 
 const mapDispatchToProps = (dispatch) => ({
   getAllArtists: () => {
     Axios.get('http://localhost:9000/artists').then((response) => {
-      dispatch(setResults(response.data));
+      dispatch(setResults({ type: 'artist', data: response.data }));
     });
   },
 
   getAlbumsByArtist: (id) => {
     Axios.get(`http://localhost:9000/albums?q=${id}`).then((response) => {
-      dispatch(setResults(response.data));
+      dispatch(setResults({ type: 'album', data: response.data }));
     });
   }
 });

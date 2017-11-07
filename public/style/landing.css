@@ -65,8 +65,8 @@ div {
 
 .results-sctn__result-tile {
   position: relative;
-  height: calc((100vw - (9 * 16px)) / 8);
-  width: calc((100vw - (9 * 16px)) / 8);
+  height: calc((100vw - (11 * 16px)) / 10);
+  width: calc((100vw - (11 * 16px)) / 10);
   background-color: #333;
   border-radius: 2px;
   box-shadow: 0 5px 15px -5px black;
@@ -76,11 +76,11 @@ div {
   background-size: cover;
 }
 
-.results-result-tile:hover .results-sctn__artist-hover {
+.results-sctn__result-tile:hover .results-sctn__result-hover {
   display: flex;
 }
 
-.results-sctn__artist-hover {
+.results-sctn__result-hover {
   display: none;
   justify-content: center;
   align-items: center;
