@@ -63,7 +63,7 @@ div {
   padding: 8px;
 }
 
-.results-sctn__artist-btn {
+.results-sctn__result-tile {
   position: relative;
   height: calc((100vw - (9 * 16px)) / 8);
   width: calc((100vw - (9 * 16px)) / 8);
@@ -76,7 +76,7 @@ div {
   background-size: cover;
 }
 
-.results-sctn__artist-btn:hover .results-sctn__artist-hover {
+.results-result-tile:hover .results-sctn__artist-hover {
   display: flex;
 }
 

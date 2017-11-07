@@ -5,8 +5,8 @@
   "main": "server/start.js",
   "scripts": {
     "start": "npm run server & webpack --watch",
-    "dev": "webpack-dev-server",
-    "server": "node server/start.js"
+    "dev": "npm run server & webpack-dev-server",
+    "server": "nodemon server/start.js"
   },
   "babel": {
     "presets": [
