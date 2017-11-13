@@ -11,15 +11,17 @@ class AlbumList extends Component {
   }
 
   render() {
-    const albumList = this.props.albums.map(album => {
-      const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
+    const albumList = this.props.albums
+      .filter(album => {
+        return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0
+      }).map(album => {
+        const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
 
-      return (
-        <button
-          className="results-sctn__result-tile"
-          key={album.id}
-          style={tileStyle}
-          >
+        return (
+          <button
+            className="results-sctn__result-tile"
+            key={album.id}
+            style={tileStyle}>
             <div className="results-sctn__result-hover">{album.title}</div>
           </button>
         );
