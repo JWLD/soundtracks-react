@@ -1,0 +1,6 @@
+{
+  "events": {
+    "start": "npm run sass"
+  },
+  "ext": "js scss"
+}

@@ -5,8 +5,9 @@
   "main": "server/start.js",
   "scripts": {
     "start": "npm run server & webpack --watch",
-    "dev": "npm run server & webpack-dev-server",
-    "server": "nodemon --watch server/ server/start.js"
+    "dev": "npm run sass & npm run server & webpack-dev-server",
+    "server": "nodemon --ignore app/ server/start.js",
+    "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css"
   },
   "babel": {
     "presets": [
@@ -28,6 +29,7 @@
     "axios": "^0.16.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "node-sass": "^4.6.1",
     "pg": "^6.4.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
