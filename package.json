@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run server & webpack --watch",
     "dev": "npm run server & webpack-dev-server",
-    "server": "nodemon server/start.js"
+    "server": "nodemon --watch server/ server/start.js"
   },
   "babel": {
     "presets": [
