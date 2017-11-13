@@ -1,71 +1,50 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
 import Axios from 'axios';
 
-import { setResults } from '../redux/actions';
+import SearchBar from './SearchBar';
+import { setAlbums } from '../redux/actions';
 
-class ResultsList extends Component {
-  componentDidMount() {
-    this.props.getAllArtists();
+class AlbumList extends Component {
+  componentWillMount() {
+    this.props.getAlbumsByArtist(this.props.match.params.id);
   }
 
   render() {
-    let resultsList;
+    const albumList = this.props.albums.map(album => {
+      const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
 
-    if (this.props.resultType === 'artist') {
-      resultsList = this.props.results
-        .filter(result => result.name.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0)
-        .map(result => (
-          <Link
-            to={`/artists/${result.discogs_id}`}
-            key={result.id}
-            className="results-sctn__result-tile"
-            onClick={() => this.props.getAlbumsByArtist(result.discogs_id)}
+      return (
+        <button
+          className="results-sctn__result-tile"
+          key={album.id}
+          style={tileStyle}
           >
-            {result.name}
-          </Link>
-        ));
-    } else {
-      resultsList = this.props.results.map(result => {
-        const tileStyle = { backgroundImage: `url(${result.spotify_img})` };
-
-        return (
-          <button
-            className="results-sctn__result-tile"
-            key={result.id}
-            style={tileStyle}
-          >
-            <div className="results-sctn__result-hover">{result.title}</div>
+            <div className="results-sctn__result-hover">{album.title}</div>
           </button>
         );
-      });
-    }
+      }
+    );
 
     return (
-      <ul>{resultsList}</ul>
-    )
+      <ul>{albumList}</ul>
+    );
   }
 };
 
 const mapStateToProps = (state) => ({
   searchTerm: state.searchTerm,
-  resultType: state.resultType,
-  results: state.results
+  albums: state.albums
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getAllArtists: () => {
-    Axios.get('http://localhost:9000/artists').then((response) => {
-      dispatch(setResults(response.data));
-    });
-  },
-
   getAlbumsByArtist: (id) => {
+    dispatch(setAlbums([]));
+
     Axios.get(`http://localhost:9000/albums?q=${id}`).then((response) => {
-      dispatch(setResults(response.data));
+      dispatch(setAlbums(response.data));
     });
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(ResultsList));
+export default connect(mapStateToProps, mapDispatchToProps)(AlbumList);

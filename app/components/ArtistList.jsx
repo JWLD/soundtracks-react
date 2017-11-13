@@ -19,11 +19,11 @@ class ArtistList extends Component {
           to={`/artists/${artist.discogs_id}`}
           key={artist.id}
           className="results-sctn__result-tile"
-          onClick={() => this.props.getAlbumsByArtist(artist.discogs_id)}
         >
           {artist.name}
         </Link>
-      ));
+      )
+    );
 
     return (
       <ul>{artistList}</ul>
