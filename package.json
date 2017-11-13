@@ -26,7 +26,7 @@
   "homepage": "https://github.com/JWLD/soundtracks-react#readme",
   "dependencies": {
     "axios": "^0.16.2",
-    "env2": "^2.2.0",
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "pg": "^6.4.0",
     "react": "^15.6.1",

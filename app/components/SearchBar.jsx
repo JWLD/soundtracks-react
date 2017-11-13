@@ -9,7 +9,7 @@ const SearchBar = (props) => {
   const iconClass = props.searchTerm ? 'page-hdr__reset-btn' : 'hide';
 
   return (
-    <div>
+    <header className='page-hdr'>
       <input
         className='page-hdr__input'
         value={props.searchTerm}
@@ -22,7 +22,7 @@ const SearchBar = (props) => {
           onClick={props.clearSearch}
         />
       </div>
-    </div>
+    </header>
   );
 };
 

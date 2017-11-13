@@ -1,7 +1,8 @@
 // ACTION TYPES
 
 export const SET_SEARCH_TERM = 'SET_SEARCH_TERM';
-export const SET_RESULTS = 'SET_RESULTS';
+export const SET_ARTISTS = 'SET_ARISTS';
+export const SET_ALBUMS = 'SET_ALBUMS';
 
 // ACTION CREATORS
 
@@ -12,9 +13,16 @@ export function setSearchTerm(searchTerm) {
   };
 }
 
-export function setResults(results) {
+export function setArtists(artists) {
   return {
-    type: SET_RESULTS,
-    payload: results
+    type: SET_ARTISTS,
+    payload: artists
+  }
+}
+
+export function setAlbums(albums) {
+  return {
+    type: SET_ALBUMS,
+    payload: albums
   }
 }
