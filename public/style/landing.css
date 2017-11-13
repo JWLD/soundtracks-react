@@ -1,8 +1,3 @@
-div {
-  width: 100%;
-  height: 100%;
-}
-
 /* GENERAL */
 
 .hide {
@@ -12,8 +7,12 @@ div {
 /* PAGE HEADER */
 
 .page-hdr {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   height: 72px;
+  width: 100%;
   padding: 8px;
   background-color: #383d47;
   box-shadow: 0 0 15px 1px black;
@@ -61,6 +60,7 @@ div {
   display: flex;
   flex-wrap: wrap;
   padding: 8px;
+  margin-top: 72px;
 }
 
 .results-sctn__result-tile {
@@ -89,6 +89,8 @@ div {
   display: none;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
   padding: 8px;
   position: absolute;
   top: 0;
