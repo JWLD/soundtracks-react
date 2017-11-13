@@ -39,7 +39,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getAlbumsByArtist: (id) => {
-    dispatch(setAlbums([]));
+    dispatch(setAlbums([])); // clear albums before loading
 
     Axios.get(`http://localhost:9000/albums?q=${id}`).then((response) => {
       dispatch(setAlbums(response.data));
