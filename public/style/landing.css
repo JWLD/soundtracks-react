@@ -64,9 +64,13 @@ div {
 }
 
 .results-sctn__result-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
-  height: calc((100vw - (11 * 16px)) / 10);
-  width: calc((100vw - (11 * 16px)) / 10);
+  height: calc((100vw - (9 * 16px)) / 8);
+  width: calc((100vw - (9 * 16px)) / 8);
   background-color: #333;
   border-radius: 2px;
   box-shadow: 0 5px 15px -5px black;
@@ -74,6 +78,7 @@ div {
   color: #eee;
   margin: 8px;
   background-size: cover;
+  text-decoration: none;
 }
 
 .results-sctn__result-tile:hover .results-sctn__result-hover {
