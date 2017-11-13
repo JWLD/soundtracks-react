@@ -16,14 +16,17 @@ class AlbumList extends Component {
         return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0
       }).map(album => {
         const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
+        const link = `https://open.spotify.com/album/${album.spotify_id}`;
 
         return (
-          <button
+          <a
             className="results-sctn__result-tile"
             key={album.id}
-            style={tileStyle}>
-            <div className="results-sctn__result-hover">{album.title}</div>
-          </button>
+            style={tileStyle}
+            href={link}
+            target="_blank"
+          ><div className="results-sctn__result-hover">{album.title}</div>
+          </a>
         );
       }
     );
