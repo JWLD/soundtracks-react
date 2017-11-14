@@ -9,7 +9,7 @@ body, header, h1, input, button, div, ul {
 
 // FLEX
 
-header {
+header, div, ul, a {
   @include flex;
 }
 
@@ -23,6 +23,8 @@ body {
 button:hover, a:hover {
   cursor: pointer;
 }
+
+// UTILITY CLASSES
 
 .hide {
   display: none;

@@ -16,7 +16,7 @@
   padding: 10px;
   border-radius: 2px;
   background-color: #4f5664;
-  color: #eee;
+  color: $text;
   font: 35px Dense;
 }
 
@@ -29,8 +29,7 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 40px;
-  padding: 25px 0;
+  margin-right: 23px;
 }
 
 .page-hdr__reset-btn {

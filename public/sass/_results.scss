@@ -1,14 +1,11 @@
 .results-sctn ul {
-  display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: $tile-padding;
   margin-top: $header-height;
 }
 
 .results-sctn__result-tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   position: relative;
   height: $tile_2;
@@ -16,8 +13,8 @@
   background-color: #333;
   border-radius: 2px;
   box-shadow: 0 5px 15px -5px black;
-  font: 1.5vw Dense;
-  color: #eee;
+  font: 22px Dense;
+  color: $text;
   margin: $tile-padding;
   background-size: cover;
   text-decoration: none;
@@ -29,8 +26,6 @@
 
 .results-sctn__result-hover {
   display: none;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   padding: 8px;
@@ -84,5 +79,19 @@ $range: 175px;
   .results-sctn__result-tile {
     width: $tile_8;
     height: $tile_8;
+  }
+}
+
+@media (min-width: $base + #{$range} * 6) {
+  .results-sctn__result-tile {
+    width: $tile_9;
+    height: $tile_9;
+  }
+}
+
+@media (min-width: $base + #{$range} * 7) {
+  .results-sctn__result-tile {
+    width: $tile_10;
+    height: $tile_10;
   }
 }

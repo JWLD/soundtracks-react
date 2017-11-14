@@ -8,7 +8,7 @@ body, header, h1, input, button, div, ul {
   border: 0;
   box-sizing: border-box; }
 
-header {
+header, div, ul, a {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -51,8 +51,7 @@ button:hover, a:hover {
   top: 0;
   right: 0;
   height: 100%;
-  width: 40px;
-  padding: 25px 0; }
+  margin-right: 23px; }
 
 .page-hdr__reset-btn {
   height: 20px;
@@ -66,15 +65,12 @@ button:hover, a:hover {
   cursor: pointer; }
 
 .results-sctn ul {
-  display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 8px;
   margin-top: 72px; }
 
 .results-sctn__result-tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   position: relative;
   height: calc((100vw - (3 * (8px * 2))) / 2);
@@ -82,7 +78,7 @@ button:hover, a:hover {
   background-color: #333;
   border-radius: 2px;
   box-shadow: 0 5px 15px -5px black;
-  font: 1.5vw Dense;
+  font: 22px Dense;
   color: #eee;
   margin: 8px;
   background-size: cover;
@@ -93,8 +89,6 @@ button:hover, a:hover {
 
 .results-sctn__result-hover {
   display: none;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
   padding: 8px;
@@ -132,3 +126,13 @@ button:hover, a:hover {
   .results-sctn__result-tile {
     width: calc((100vw - (9 * (8px * 2))) / 8);
     height: calc((100vw - (9 * (8px * 2))) / 8); } }
+
+@media (min-width: 1525px) {
+  .results-sctn__result-tile {
+    width: calc((100vw - (10 * (8px * 2))) / 9);
+    height: calc((100vw - (10 * (8px * 2))) / 9); } }
+
+@media (min-width: 1700px) {
+  .results-sctn__result-tile {
+    width: calc((100vw - (11 * (8px * 2))) / 10);
+    height: calc((100vw - (11 * (8px * 2))) / 10); } }
