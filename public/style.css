@@ -64,6 +64,9 @@ button:hover, a:hover {
 .page-hdr__reset-btn:hover {
   cursor: pointer; }
 
+.results-sctn {
+  min-width: 100vw; }
+
 .results-sctn ul {
   justify-content: flex-start;
   flex-wrap: wrap;
