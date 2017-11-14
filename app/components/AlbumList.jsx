@@ -13,10 +13,15 @@ class AlbumList extends Component {
   render() {
     const albumList = this.props.albums
       .filter(album => {
-        return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0
+        return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0 && album.spotify_img
       }).map(album => {
+        const albumTitle = encodeURIComponent(album.title);
+
+        const link = album.spotify_img ?
+          `https://open.spotify.com/album/${album.spotify_id}` :
+          `https://www.youtube.com/results?search_query=hans+zimmer+${albumTitle}`;
+
         const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
-        const link = `https://open.spotify.com/album/${album.spotify_id}`;
 
         return (
           <a

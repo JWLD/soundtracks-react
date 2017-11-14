@@ -1,0 +1,31 @@
+// SIZE RESET
+
+body, header, h1, input, button, div, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+// FLEX
+
+header, div, ul, a {
+  @include flex;
+}
+
+// GENERAL
+
+body {
+  min-height: 100vh;
+  background-color: #21252b;
+}
+
+button:hover, a:hover {
+  cursor: pointer;
+}
+
+// UTILITY CLASSES
+
+.hide {
+  display: none;
+}
