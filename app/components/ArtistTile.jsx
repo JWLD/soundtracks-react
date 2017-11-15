@@ -1,0 +1,15 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const ArtistTile = (props) => (  
+  <li>
+    <Link
+      to={`/artists/${props.discogs_id}`}
+      key={props.id}
+      className="results-sctn__result-tile"
+      >{props.name}
+    </Link>
+  </li>
+);
+
+export default ArtistTile;
