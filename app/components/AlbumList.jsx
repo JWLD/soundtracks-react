@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
-
-import SearchBar from './SearchBar';
-import { setAlbums } from '../redux/actions';
+const Querystring = require('querystring');
 
 class AlbumList extends Component {
-  componentWillMount() {
-    this.props.getAlbumsByArtist(this.props.match.params.id);
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      albums: [],
+      artist: ''
+    };
+  }
+
+  componentDidMount() {
+    Axios.get(`http://localhost:9000/albums?q=${this.props.match.params.id}`).then((response) => {
+      this.setState({
+        albums: response.data.albums,
+        artist: response.data.artist
+      });
+    });
   }
 
   render() {
-    const albumList = this.props.albums
+    const albumList = this.state.albums
       .filter(album => {
-        return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0 && album.spotify_img
+        return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0
       }).map(album => {
         const albumTitle = encodeURIComponent(album.title);
 
         const link = album.spotify_img ?
           `https://open.spotify.com/album/${album.spotify_id}` :
-          `https://www.youtube.com/results?search_query=hans+zimmer+${albumTitle}`;
+          `https://www.youtube.com/results?search_query=${this.state.artist}+${albumTitle}`;
 
         const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
 
@@ -43,18 +55,7 @@ class AlbumList extends Component {
 };
 
 const mapStateToProps = (state) => ({
-  searchTerm: state.searchTerm,
-  albums: state.albums
+  searchTerm: state.searchTerm
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  getAlbumsByArtist: (id) => {
-    dispatch(setAlbums([])); // clear albums before loading
-
-    Axios.get(`http://localhost:9000/albums?q=${id}`).then((response) => {
-      dispatch(setAlbums(response.data));
-    });
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(AlbumList);
+export default connect(mapStateToProps)(AlbumList);

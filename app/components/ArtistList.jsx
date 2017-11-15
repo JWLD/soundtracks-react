@@ -3,15 +3,23 @@ import { connect } from 'react-redux';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import { setArtists } from '../redux/actions';
-
 class ArtistList extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      artists: []
+    };
+  }
+
   componentDidMount() {
-    this.props.getAllArtists();
+    Axios.get('http://localhost:9000/artists').then((response) => {
+      this.setState({ artists: response.data });
+    });
   }
 
   render() {
-    const artistList = this.props.artists
+    const artistList = this.state.artists
       .filter(artist => {
         return artist.name.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0
       }).map(artist => (
@@ -32,16 +40,7 @@ class ArtistList extends Component {
 };
 
 const mapStateToProps = (state) => ({
-  searchTerm: state.searchTerm,
-  artists: state.artists
+  searchTerm: state.searchTerm
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  getAllArtists: () => {
-    Axios.get('http://localhost:9000/artists').then((response) => {
-      dispatch(setArtists(response.data));
-    });
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ArtistList);
+export default connect(mapStateToProps)(ArtistList);
