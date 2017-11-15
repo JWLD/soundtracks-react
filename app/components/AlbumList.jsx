@@ -8,26 +8,30 @@ class AlbumList extends Component {
     super(props);
 
     this.state = {
-      albums: []
+      albums: [],
+      artist: ''
     };
   }
 
   componentDidMount() {
     Axios.get(`http://localhost:9000/albums?q=${this.props.match.params.id}`).then((response) => {
-      this.setState({ albums: response.data });
+      this.setState({
+        albums: response.data.albums,
+        artist: response.data.artist
+      });
     });
   }
 
   render() {
     const albumList = this.state.albums
       .filter(album => {
-        return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0 && album.spotify_img
+        return album.title.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0
       }).map(album => {
         const albumTitle = encodeURIComponent(album.title);
 
         const link = album.spotify_img ?
           `https://open.spotify.com/album/${album.spotify_id}` :
-          `https://www.youtube.com/results?search_query=hans+zimmer+${albumTitle}`;
+          `https://www.youtube.com/results?search_query=${this.state.artist}+${albumTitle}`;
 
         const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
 
