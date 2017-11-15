@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
-const Querystring = require('querystring');
+
+import AlbumTile from '../components/AlbumTile';
 
 class AlbumList extends Component {
   constructor(props) {
@@ -35,22 +36,12 @@ class AlbumList extends Component {
 
         const tileStyle = { backgroundImage: `url(${album.spotify_img})` };
 
-        return (
-          <a
-            className="results-sctn__result-tile"
-            key={album.id}
-            style={tileStyle}
-            href={link}
-            target="_blank"
-          ><div className="results-sctn__result-hover">{album.title}</div>
-          </a>
-        );
-      }
-    );
+        return <AlbumTile key={album.id} link={link} tileStyle={tileStyle} {...album} />;
+      });
 
     return (
       <ul>{albumList}</ul>
-    );
+    )
   }
 };
 

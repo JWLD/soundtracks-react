@@ -3,14 +3,14 @@ const dbQueries = require('../db_queries.js');
 const parallel = require('../helpers/parallel.js');
 
 module.exports = (req, res) => {
-  var getAlbums = (callback) => {
+  const getAlbums = (callback) => {
     dbQueries.getAlbums(connPool, req.query.q, (err, dbRes) => {
       if (err) return callback(err);
       return callback(null, dbRes.rows);
     });
   };
 
-  var getArtistName = (callback) => {
+  const getArtistName = (callback) => {
     dbQueries.getArtistName(connPool, req.query.q, (err, dbRes) => {
       if (err) return callback(err);
       return callback(null, dbRes.rows[0].name);

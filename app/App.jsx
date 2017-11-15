@@ -4,22 +4,14 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import store from './redux/store';
-import SearchBar from './components/SearchBar';
-import ArtistList from './components/ArtistList';
-import AlbumList from './components/AlbumList';
+import Landing from './containers/Landing';
 
 const App = () => (
   <BrowserRouter>
     <Provider store={store}>
-      <div>
-        <SearchBar />
-        <section className="results-sctn">
-          <Switch>
-            <Route exact path="/" component={ArtistList} />
-            <Route path="/artists/:id" component={AlbumList} />
-          </Switch>
-        </section>
-      </div>
+      <Switch>
+        <Route path="/" component={Landing} />
+      </Switch>
     </Provider>
   </BrowserRouter>
 );

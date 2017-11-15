@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
+import ArtistTile from '../components/ArtistTile';
+
 class ArtistList extends Component {
   constructor(props) {
     super(props);
@@ -22,16 +24,9 @@ class ArtistList extends Component {
     const artistList = this.state.artists
       .filter(artist => {
         return artist.name.toLowerCase().indexOf(this.props.searchTerm.toLowerCase()) >= 0
-      }).map(artist => (
-        <Link
-          to={`/artists/${artist.discogs_id}`}
-          key={artist.id}
-          className="results-sctn__result-tile"
-        >
-          {artist.name}
-        </Link>
-      )
-    );
+      }).map(artist => {
+        return <ArtistTile key={artist.id} {...artist} />;
+      });
 
     return (
       <ul>{artistList}</ul>
