@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ArtistTile = (props) => (  
+const ArtistTile = (props) => (
   <li>
     <Link
-      to={`/artists/${props.discogs_id}`}
+      to={`/artists/${props.spotify_id}`}
       key={props.id}
       className="results-sctn__result-tile"
       >{props.name}

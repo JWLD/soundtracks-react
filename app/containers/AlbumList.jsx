@@ -15,12 +15,18 @@ class AlbumList extends Component {
   }
 
   componentDidMount() {
-    Axios.get(`http://localhost:9000/albums?q=${this.props.match.params.id}`).then((response) => {
-      this.setState({
-        albums: response.data.albums,
-        artist: response.data.artist
+    Axios.get(`http://localhost:9000/albums?q=${this.props.match.params.id}`)
+      .then((response) => {
+        if (response.data.error) return console.log(response.data.error.message);
+
+        this.setState({
+          albums: response.data.albums,
+          artist: response.data.artist
+        });
+      })
+      .catch((err) => {
+        return console.log(err);
       });
-    });
   }
 
   render() {
