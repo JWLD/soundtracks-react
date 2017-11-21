@@ -9,7 +9,7 @@ dbQueries.getAllArtists = (connPool, callback) => {
 
 dbQueries.getAlbums = (connPool, artistId, callback) => {
   connPool.query(
-    'SELECT * FROM albums WHERE artist_id = $1 ORDER BY year DESC, title',
+    'SELECT * FROM albums WHERE spotify_id IN (SELECT album_id FROM albums_artists WHERE artist_id = $1)',
     [artistId],
     callback
   );
