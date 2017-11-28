@@ -1,4 +1,5 @@
 # soundtracks-react
+- View the live site [here](https://soundtracks.herokuapp.com/)
 
 ### Tech Stack
 - React
