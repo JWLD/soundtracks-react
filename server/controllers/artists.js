@@ -3,7 +3,7 @@ const dbQueries = require('../db_queries.js');
 
 module.exports = (req, res) => {
   dbQueries.getAllArtists(connPool, (err, dbRes) => {
-    if (err) return res.send(err);
+    if (err) return res.status(500).send(err);
     res.send(dbRes.rows)
   });
 };
