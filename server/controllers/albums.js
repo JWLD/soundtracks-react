@@ -21,7 +21,7 @@ module.exports = (req, res) => {
     getAlbums,
     getArtistName
   ], (err, result) => {
-    if (err) return res.send(err);
+    if (err) return res.status(500).send(err);
 
     return res.send({
       albums: result[0],

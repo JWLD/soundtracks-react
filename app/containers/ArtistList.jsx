@@ -17,12 +17,10 @@ class ArtistList extends Component {
   componentDidMount() {
     Axios.get('http://localhost:9000/artists')
       .then((response) => {
-        if (response.data.error) return console.log(response.data.error.message);
-
         this.setState({ artists: response.data });
       })
       .catch((err) => {
-        return console.log(err);
+        return console.dir(err);
       });
   }
 
