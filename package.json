@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run server & webpack --watch",
     "dev": "npm run sass & npm run server & webpack-dev-server",
-    "server": "nodemon --ignore app/ server/start.js",
+    "server": "nodemon --ignore /src/client/ ./src/server/start.js",
     "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css"
   },
   "babel": {
