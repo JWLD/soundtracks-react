@@ -15,7 +15,7 @@ class ArtistList extends Component {
   }
 
   componentDidMount() {
-    Axios.get('https://localhost:9000/api/artists')
+    Axios.get('https://soundtracks.herokuapp.com/api/artists')
       .then((response) => {
         this.setState({ artists: response.data });
       })
