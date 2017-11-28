@@ -15,7 +15,7 @@ class AlbumList extends Component {
   }
 
   componentDidMount() {
-    Axios.get(`http://localhost:9000/albums?q=${this.props.match.params.id}`)
+    Axios.get(`http://localhost:9000/api/albums?q=${this.props.match.params.id}`)
       .then((response) => {
         this.setState({
           albums: response.data.albums,

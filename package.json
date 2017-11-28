@@ -4,16 +4,11 @@
   "description": "",
   "main": "server/start.js",
   "scripts": {
-    "start": "npm run server & webpack --watch",
-    "dev": "npm run sass & npm run server & webpack-dev-server",
-    "server": "nodemon --ignore /src/client/ ./src/server/start.js",
-    "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
+		"build": "webpack --watch",
+		"dev": "npm run sass & npm run server & webpack-dev-server",
+		"sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css",
+		"server": "nodemon --ignore /src/client/ ./src/server/start.js",
+    "start": "npm run server & webpack --watch"
   },
   "repository": {
     "type": "git",

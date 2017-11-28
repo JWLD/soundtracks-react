@@ -5,15 +5,16 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import store from './redux/store';
 import Landing from './containers/Landing';
+import SearchBar from './components/SearchBar';
 
 const App = () => (
-  <BrowserRouter>
-    <Provider store={store}>
-      <Switch>
-        <Route path="/" component={Landing} />
-      </Switch>
-    </Provider>
-  </BrowserRouter>
+	<BrowserRouter>
+	  <Provider store={store}>
+	    <Switch>
+	      <Route path="/" component={Landing} />
+	    </Switch>
+	  </Provider>
+	</BrowserRouter>
 );
 
 render(<App />, document.getElementById('root'));
