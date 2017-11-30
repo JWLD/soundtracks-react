@@ -6,7 +6,6 @@
 - Redux
 - Express
 - PostgreSQL
-- Webpack
 
 ### Design Principles
 - Mobile-first
