@@ -1,5 +1,5 @@
 # soundtracks-react
-- View the live site [here](https://soundtracks.herokuapp.com/)
+- Work in progress, but you can view the current version of the site [here](https://soundtracks.herokuapp.com/)
 
 ### Tech Stack
 - React
