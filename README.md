@@ -7,8 +7,3 @@
 - Redux
 - Express
 - PostgreSQL
-
-### Design Principles
-- Mobile-first
-- ES6
-- BEM
