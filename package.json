@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/start.js",
   "scripts": {
-		"start": "npm run build & node src/server/start.js",
+		"start": "node src/server/start.js",
 		"dev": "npm run sass & webpack --watch & npm run server",
 		"build": "webpack",
 		"sass": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
