@@ -9,12 +9,6 @@
     "server": "nodemon --ignore app/ server/start.js",
     "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css"
   },
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JWLD/soundtracks-react.git"
