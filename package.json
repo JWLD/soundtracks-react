@@ -5,7 +5,7 @@
   "main": "server/start.js",
   "scripts": {
 		"start": "node src/server/start.js",
-		"dev": "npm run sass & webpack --watch & npm run server",
+		"dev": "npm run sass & webpack-dev-server & npm run server",
 		"build": "webpack",
 		"sass": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
 		"server": "nodemon --ignore /src/client/ ./src/server/start.js"
