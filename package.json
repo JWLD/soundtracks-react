@@ -1,19 +1,14 @@
 {
   "name": "soundtracks",
   "version": "1.0.0",
-  "description": "",
+  "description": "View film composers' albums",
   "main": "server/start.js",
   "scripts": {
-    "start": "npm run server & webpack --watch",
-    "dev": "npm run sass & npm run server & webpack-dev-server",
-    "server": "nodemon --ignore app/ server/start.js",
-    "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css"
-  },
-  "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
+		"start": "npm run build & node src/server/start.js",
+		"dev": "npm run sass & webpack --watch & npm run server",
+		"build": "webpack",
+		"sass": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
+		"server": "nodemon --ignore /src/client/ ./src/server/start.js"
   },
   "repository": {
     "type": "git",

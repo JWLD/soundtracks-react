@@ -6,7 +6,8 @@ body, header, h1, input, button, div, ul {
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border-radius: 0; }
 
 header, div, ul, a {
   display: flex;
