@@ -4,11 +4,11 @@
   "description": "View film composers' albums",
   "main": "server/start.js",
   "scripts": {
-		"build": "webpack --watch",
-		"dev": "npm run sass & npm run server",
+		"start": "npm run build & node src/server/start.js",
+		"dev": "npm run sass & webpack --watch & npm run server",
+		"build": "webpack",
 		"sass": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
-		"server": "nodemon --ignore /src/client/ ./src/server/start.js",
-    "start": "node src/server/start.js"
+		"server": "nodemon --ignore /src/client/ ./src/server/start.js"
   },
   "repository": {
     "type": "git",

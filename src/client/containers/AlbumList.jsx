@@ -15,7 +15,7 @@ class AlbumList extends Component {
   }
 
   componentDidMount() {
-    Axios.get(`https://soundtracks.herokuapp.com/api/albums?q=${this.props.match.params.id}`)
+    Axios.get(`/api/albums?q=${this.props.match.params.id}`)
       .then((response) => {
         this.setState({
           albums: response.data.albums,
