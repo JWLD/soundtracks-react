@@ -2,6 +2,6 @@ require('dotenv').config();
 
 const app = require('./server.js');
 
-app.listen(9000, () => {
-  console.log('Server running at 9000');
+app.listen(app.get('port'), () => {
+  console.log(`Server running at http://localhost:${app.get('port')}`);
 });
