@@ -1,15 +1,16 @@
 // SIZE RESET
 
-body, header, h1, input, button, div, ul {
+a, body, button, div, h1, header, input, section, span, svg, ul {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  border-radius: 0;
 }
 
 // FLEX
 
-header, div, ul, a {
+a, button, div, form, header, section, span, ul {
   @include flex;
 }
 
@@ -20,12 +21,35 @@ body {
   background-color: #21252b;
 }
 
-button:hover, a:hover {
+a:hover, button:hover, svg:hover {
   cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.app {
+  flex-direction: column;
+}
+
+.main {
+  flex-direction: column;
+  width: 100vw;
+  padding: $sFull;
 }
 
 // UTILITY CLASSES
 
 .hide {
   display: none;
+}
+
+.inactive {
+  pointer-events: none;
+  cursor: default;
+
+	&.tile {
+		color: #444 !important;
+	}
 }

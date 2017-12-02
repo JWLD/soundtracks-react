@@ -1,13 +1,15 @@
 import React from 'react';
 
 import DataHeader from './DataHeader';
+import ArtistSearch from '../containers/ArtistSearch';
+import DataAlbumList from '../containers/DataAlbumList';
 
 const DataEntry = () => (
-	<div>
+	<div className="app">
 		<DataHeader />
     <div className="main">
-      {/* <ArtistSearch /> */}
-      {/* <AlbumList /> */}
+      <ArtistSearch />
+      <DataAlbumList />
     </div>
   </div>
 );
