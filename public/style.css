@@ -150,6 +150,7 @@ button:hover, a:hover {
   box-shadow: 0 0 15px 1px black; }
 
 .header-bar__title {
+  margin-left: 5px;
   font: bold 30px Helvetica;
   color: #eee; }
 

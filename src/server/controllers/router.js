@@ -1,6 +1,29 @@
-const router = require('express').Router();
+const Router = require('express').Router();
 
-router.get('/artists', require('./artists.js'));
-router.get('/albums', require('./albums.js'));
+// middleware
+const spotifyAuth = require('../middleware/spotifyAuth');
+const getAlbumIds = require('../middleware/getAlbumIds');
+const checkExists = require('../middleware/checkExists');
 
-module.exports = router;
+// controllers
+const authController = require('./auth');
+const spotifyController = require('./spotify');
+const dbController = require('./database');
+
+// AUTH
+Router.get('/login', authController.login);
+Router.get('/redirect', authController.redirect);
+
+// SPOTIFY
+Router.get('/sp-artists', spotifyAuth, spotifyController.artists);
+Router.get('/sp-albums', spotifyAuth, getAlbumIds, spotifyController.albums);
+Router.get('/sp-album-date', spotifyAuth, spotifyController.albumDate);
+
+// DATABASE
+Router.get('/db-artists', dbController.getAllArtists);
+Router.get('/db-albums', dbController.getAlbumsByArtist);
+Router.post('/db-artists', checkExists.artist, dbController.addArtist);
+Router.post('/db-albums', checkExists.albumArtist, checkExists.album, dbController.addAlbum);
+Router.delete('/db-albums', dbController.deleteAlbum);
+
+module.exports = Router;

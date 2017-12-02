@@ -4,12 +4,12 @@
   "description": "",
   "main": "server/start.js",
   "scripts": {
-		"start": "node src/server/start.js",
-		"dev": "npm run sass & webpack-dev-server & npm run server",
-		"build": "webpack",
-		"sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css & npm run sass:watch",
-		"sass:watch": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
-		"server": "nodemon --ignore ./src/client/ ./src/server/start.js"
+    "start": "node src/server/start.js",
+    "dev": "npm run sass & webpack-dev-server & npm run server",
+    "build": "webpack",
+    "sass": "./node_modules/.bin/node-sass ./public/sass/main.scss ./public/style.css & npm run sass:watch",
+    "sass:watch": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
+    "server": "nodemon --ignore ./src/client/ ./src/server/start.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,11 @@
   "homepage": "https://github.com/JWLD/soundtracks-react#readme",
   "dependencies": {
     "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "jsonwebtoken": "^8.1.0",
     "node-sass": "^4.6.1",
     "pg": "^6.4.0",
     "react": "^15.6.1",

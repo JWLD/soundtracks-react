@@ -15,7 +15,7 @@ class ArtistList extends Component {
   }
 
   componentDidMount() {
-    Axios.get('/api/artists')
+    Axios.get('/api/db-artists')
       .then((response) => {
         this.setState({ artists: response.data });
       })
