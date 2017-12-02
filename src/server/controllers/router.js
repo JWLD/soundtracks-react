@@ -2,7 +2,7 @@ const Router = require('express').Router();
 
 // middleware
 const spotifyAuth = require('../middleware/spotifyAuth');
-const getDBAlbumIds = require('../middleware/getAlbumIds');
+const getDBAlbumIds = require('../middleware/getDBAlbumIds');
 const checkExists = require('../middleware/checkExists');
 
 // controllers
