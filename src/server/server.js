@@ -1,23 +1,23 @@
-const Express = require('express');
-const BodyParser = require('body-parser');
-const CookieParser = require('cookie-parser');
-const Path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const path = require('path');
 const router = require('./controllers/router.js');
 
-const app = Express();
+const app = express();
 
 app.set('port', process.env.PORT || 8070);
 
-app.use(BodyParser.json());
-app.use(BodyParser.urlencoded({ extended: true }));
-app.use(CookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.use('/api', router);
 
-app.use(Express.static('public'));
+app.use(express.static('public'));
 
 app.get('*', (req, res) => {
-	res.sendFile(Path.join(__dirname, '../../public/index.html'));
+	res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
 
 module.exports = app;

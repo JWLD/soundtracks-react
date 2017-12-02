@@ -11,19 +11,26 @@ const spotifyController = require('./spotify');
 const dbController = require('./database');
 
 // AUTH
-Router.get('/login', authController.login);
-Router.get('/redirect', authController.redirect);
+Router.route('/login')
+	.get(authController.login);
+Router.route('/redirect')
+	.get(authController.redirect);
 
 // SPOTIFY
-Router.get('/sp-artists', spotifyAuth, spotifyController.artists);
-Router.get('/sp-albums', spotifyAuth, getDBAlbumIds, spotifyController.albums);
-Router.get('/sp-album-date', spotifyAuth, spotifyController.albumDate);
+Router.route('/sp-artists')
+	.get(spotifyAuth, spotifyController.artists)
+Router.route('/sp-albums')
+	.get(spotifyAuth, getDBAlbumIds, spotifyController.albums)
+Router.route('/sp-album-date')
+ 	.get(spotifyAuth, spotifyController.albumDate);
 
 // DATABASE
-Router.get('/db-artists', dbController.getAllArtists);
-Router.get('/db-albums', dbController.getAlbumsByArtist);
-Router.post('/db-artists', checkExists.artist, dbController.addArtist);
-Router.post('/db-albums', checkExists.albumArtist, checkExists.album, dbController.addAlbum);
-Router.delete('/db-albums', dbController.deleteAlbum);
+Router.route('/db-artists')
+ 	.get(dbController.getAllArtists)
+	.post(checkExists.artist, dbController.addArtist);
+Router.route('/db-albums')
+ 	.get(dbController.getAlbumsByArtist)
+	.post(checkExists.albumArtist, checkExists.album, dbController.addAlbum)
+	.delete(dbController.deleteAlbum);
 
 module.exports = Router;
