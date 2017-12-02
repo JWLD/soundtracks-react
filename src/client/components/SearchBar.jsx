@@ -14,7 +14,7 @@ const SearchBar = (props) => {
         className='page-hdr__input'
         value={props.searchTerm}
         onChange={props.onSearchTermChange}
-        placeholder='Filter'
+        placeholder='Search'
       />
       <div className='page-hdr__reset-wrap'>
         <FaClose

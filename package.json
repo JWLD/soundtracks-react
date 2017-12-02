@@ -8,7 +8,7 @@
 		"dev": "npm run sass & webpack-dev-server & npm run server",
 		"build": "webpack",
 		"sass": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
-		"server": "nodemon --ignore /src/client/ ./src/server/start.js"
+		"server": "nodemon --ignore ./src/client/ ./src/server/start.js"
   },
   "repository": {
     "type": "git",
