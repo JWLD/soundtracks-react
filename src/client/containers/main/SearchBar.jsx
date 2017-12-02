@@ -3,7 +3,7 @@ import FaClose from 'react-icons/lib/fa/close';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 
-import { setSearchTerm, setResults } from '../redux/actions';
+import { setSearchTerm, setResults } from '../../redux/actions';
 
 const SearchBar = (props) => {
   const iconClass = props.searchTerm ? 'page-hdr__reset-btn' : 'hide';

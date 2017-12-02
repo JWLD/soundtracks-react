@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 
-import AlbumTile from '../components/AlbumTile';
+import AlbumTile from '../../components/main/AlbumTile';
 
 class AlbumList extends Component {
   constructor(props) {

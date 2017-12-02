@@ -6,7 +6,7 @@ import FaExternalLinkSquare from 'react-icons/lib/fa/external-link-square';
 import FaPlus from 'react-icons/lib/fa/plus';
 import FaMinus from 'react-icons/lib/fa/minus'
 
-import titleData from '../data/titlePhrases';
+import titleData from '../../data/titlePhrases';
 
 class AlbumTile extends Component {
   constructor(props) {

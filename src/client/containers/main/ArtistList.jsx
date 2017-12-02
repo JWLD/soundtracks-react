@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import ArtistTile from '../components/ArtistTile';
+import ArtistTile from '../../components/main/ArtistTile';
 
 class ArtistList extends Component {
   constructor(props) {

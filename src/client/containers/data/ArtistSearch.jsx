@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 
-import { setArtist } from '../redux/actions';
+import { setArtist } from '../../redux/actions';
 
 class ArtistSearch extends Component {
   constructor(props) {

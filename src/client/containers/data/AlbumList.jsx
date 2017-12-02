@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 
-import AlbumResultsNav from '../components/AlbumResultsNav';
-import DataAlbumTile from './DataAlbumTile';
+import ResultsNav from '../../components/data/ResultsNav';
+import AlbumPanel from './AlbumPanel';
 
 class AlbumList extends Component {
   constructor(props) {
@@ -55,12 +55,12 @@ class AlbumList extends Component {
 
 			const added = this.state.dbAlbums.indexOf(album.id) !== -1;
 
-      return <DataAlbumTile key={album.id} {...album} albumArt={imgUrl} added={added} />;
+      return <AlbumPanel key={album.id} {...album} albumArt={imgUrl} added={added} />;
     });
 
     return (
       <section className="album-sctn">
-				<AlbumResultsNav
+				<ResultsNav
 					getAlbums={this.getAlbums}
 					data={this.state.pageData}
 				/>
