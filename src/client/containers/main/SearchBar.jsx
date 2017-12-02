@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FaClose from 'react-icons/lib/fa/close';
+import FaPlus from 'react-icons/lib/fa/plus';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 
@@ -10,18 +11,21 @@ const SearchBar = (props) => {
 
   return (
     <header className='page-hdr'>
-      <input
-        className='page-hdr__input'
-        value={props.searchTerm}
-        onChange={props.onSearchTermChange}
-        placeholder='Search'
-      />
-      <div className='page-hdr__reset-wrap'>
-        <FaClose
-          className={iconClass}
-          onClick={props.clearSearch}
-        />
-      </div>
+			<div>
+				<input
+					className='page-hdr__input'
+					value={props.searchTerm}
+					onChange={props.onSearchTermChange}
+					placeholder='Search'
+				/>
+				<div className='page-hdr__reset-wrap'>
+					<FaClose
+						className={iconClass}
+						onClick={props.clearSearch}
+					/>
+				</div>
+			</div>
+			<a href="/add"><FaPlus /></a>
     </header>
   );
 };

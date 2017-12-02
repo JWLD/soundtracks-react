@@ -51,15 +51,29 @@ button:focus {
   padding: 8px;
   background-color: #383d47;
   box-shadow: 0 0 15px 1px black; }
+  .page-hdr > div {
+    position: relative;
+    flex-grow: 1; }
+  .page-hdr a {
+    width: 56px;
+    height: 100%;
+    margin-left: 8px;
+    border-radius: 2px;
+    color: white;
+    background-color: #21252b; }
+    .page-hdr a:hover {
+      background-color: #2d3139; }
+    .page-hdr a svg {
+      font-size: 25px; }
 
 .page-hdr__input {
   width: 100%;
-  height: 100%;
+  height: 56px;
   padding: 10px;
   border-radius: 2px;
   background-color: #4f5664;
   color: #eee;
-  font: 35px Dense; }
+  font: 34px Dense; }
 
 .page-hdr__input::placeholder {
   color: #aaa; }
@@ -67,13 +81,12 @@ button:focus {
 .page-hdr__reset-wrap {
   position: absolute;
   top: 0;
-  right: 0;
-  height: 100%;
-  margin-right: 23px; }
+  right: 15px;
+  height: 100%; }
 
 .page-hdr__reset-btn {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   padding: 3px 3px 4px 3px;
   color: #4f5664;
   background-color: #aaa;
@@ -106,6 +119,8 @@ button:focus {
   margin: 8px;
   background-size: cover;
   text-decoration: none; }
+  .results-sctn__result-tile:hover {
+    background-color: #383838; }
 
 .results-sctn__result-tile:hover .results-sctn__result-hover {
   display: flex; }

@@ -8,16 +8,38 @@
   padding: 8px;
   background-color: #383d47;
   box-shadow: 0 0 15px 1px black;
+
+	&> div {
+		position: relative;
+		flex-grow: 1;
+	}
+
+	a {
+		width: $header-height - 16px;
+		height: 100%;
+		margin-left: 8px;
+		border-radius: 2px;
+		color: white;
+		background-color: #21252b;
+
+		&:hover {
+			background-color: #2d3139;
+		}
+
+		svg {
+			font-size: 25px;
+		}
+	}
 }
 
 .page-hdr__input {
   width: 100%;
-  height: 100%;
+  height: $header-height - 16px;
   padding: 10px;
   border-radius: 2px;
   background-color: #4f5664;
   color: $text;
-  font: 35px Dense;
+  font: 34px Dense;
 }
 
 .page-hdr__input::placeholder {
@@ -27,14 +49,13 @@
 .page-hdr__reset-wrap {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 15px;
   height: 100%;
-  margin-right: 23px;
 }
 
 .page-hdr__reset-btn {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   padding: 3px 3px 4px 3px;
   color: #4f5664;
   background-color: #aaa;

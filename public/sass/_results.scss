@@ -24,6 +24,10 @@
   margin: $tile-padding;
   background-size: cover;
   text-decoration: none;
+
+	&:hover {
+		background-color: #383838;
+	}
 }
 
 .results-sctn__result-tile:hover .results-sctn__result-hover {
