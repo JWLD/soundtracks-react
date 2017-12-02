@@ -1,8 +1,12 @@
 // GENERAL
 @import 'fonts';
+@import 'mixins';
 @import 'vars';
 @import 'general';
 
-// COMPONENTS
-@import 'header';
+// MAIN PAGE
+@import 'search';
 @import 'results';
+
+// DATA ENTRY PAGE
+@import 'header';

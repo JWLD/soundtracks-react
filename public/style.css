@@ -140,3 +140,20 @@ button:hover, a:hover {
   .results-sctn__result-tile {
     width: calc((100vw - (11 * (8px * 2))) / 10);
     height: calc((100vw - (11 * (8px * 2))) / 10); } }
+
+.header-bar {
+  justify-content: space-between;
+  width: 100vw;
+  padding: 10px;
+  height: 72px;
+  background-color: #373e48;
+  box-shadow: 0 0 15px 1px black; }
+
+.header-bar__title {
+  font: bold 30px Helvetica;
+  color: #eee; }
+
+.header-bar__spotify-btn {
+  height: 100%;
+  color: #eee;
+  font-size: 55px; }

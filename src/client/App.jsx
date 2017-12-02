@@ -4,12 +4,14 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import store from './redux/store';
-import Landing from './containers/Landing';
+import Landing from './components/Landing';
+import DataEntry from './components/DataEntry';
 
 const App = () => (
   <BrowserRouter>
     <Provider store={store}>
       <Switch>
+				<Route path="/add" component={DataEntry} />
         <Route path="/" component={Landing} />
       </Switch>
     </Provider>
