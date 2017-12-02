@@ -15,7 +15,7 @@ dbController.getAllArtists = (req, res) => {
 // GET DB-ALBUMS - GET ALL ALBUMS BY SPECIFIC ARTIST FROM DB
 dbController.getAlbumsByArtist = (req, res) => {
   const getAlbums = (callback) => {
-    dbQueries.getAlbums(connPool, req.query.q, (err, dbRes) => {
+    dbQueries.getAlbumsByArtist(connPool, req.query.q, (err, dbRes) => {
       if (err) return callback(err);
       return callback(null, dbRes.rows);
     });
