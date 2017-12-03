@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 
-import { setArtist } from '../../redux/actions';
+import { setArtist, toggleAuthWarning } from '../../redux/actions';
 
 class ArtistSearch extends Component {
   constructor(props) {
@@ -32,6 +32,10 @@ class ArtistSearch extends Component {
           this.setState({ artists: response.data.artists.items });
         })
         .catch((err) => {
+					if (err.response.status === 401 && !this.props.authWarning) {
+						this.props.showAuthWarning();
+					}
+
           return console.log(err.response.data || err);
         });
     }
@@ -100,13 +104,18 @@ class ArtistSearch extends Component {
 };
 
 const mapStateToProps = (state) => ({
-  artist: state.artist
+  artist: state.artist,
+	authWarning: state.authWarning
 });
 
 const mapDispatchToProps = (dispatch) => ({
   selectArtist: (id) => {
     dispatch(setArtist(id));
-  }
+  },
+
+	showAuthWarning: () => {
+		dispatch(toggleAuthWarning());
+	}
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArtistSearch);
