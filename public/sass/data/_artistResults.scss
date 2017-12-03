@@ -1,0 +1,65 @@
+$panelSize: 250px;
+
+.data-artists-sctn {
+	flex-direction: column;
+	margin: $sFull;
+
+	input {
+	  width: ($panelSize * 3) + ($sFull * 2);
+	  height: 48px;
+		margin-bottom: $sFull;
+		padding: 12px;
+
+		border-radius: 3px;
+	  font: 20px $fDataPage;
+		text-transform: capitalize;
+	  background-color: $cTextLight;
+	}
+
+	> div {
+		justify-content: space-between;
+		width: ($panelSize * 3) + ($sFull * 2);
+	}
+}
+
+.artist-sctn__panel {
+	position: relative;
+  flex-direction: column;
+
+	width: $panelSize;
+  padding: 8px;
+
+	border-radius: 3px;
+  background-color: $cLight;
+
+	&.selected {
+		background-color: $cTextLight;
+
+		span {
+			color: black !important;
+		}
+	}
+
+	&:not(.selected):hover {
+		cursor: pointer;
+		background-color: $cLighter;
+	}
+
+	div {
+		width: $panelSize - 16px;
+		height: $panelSize - 16px;
+
+		border-radius: 3px;
+		background-color: $cMain;
+		background-size: cover;
+		background-position: center;
+	}
+
+	span {
+		width: 100%;
+		padding: 12px 0 4px 0;
+
+		color: $cTextLight;
+		font: 15px $fDataPage;
+	}
+}

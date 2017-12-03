@@ -1,0 +1,27 @@
+// RESET
+
+a, body, button, div, h1, header, input, section, span, svg, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover, button:hover, svg:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+// FLEX ELEMENTS
+
+a, button, div, form, header, section, span, ul {
+  @include flex;
+}
