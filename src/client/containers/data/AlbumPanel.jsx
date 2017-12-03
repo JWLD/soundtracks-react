@@ -40,7 +40,7 @@ class AlbumTile extends Component {
         this.setState({ year: response.data });
       })
       .catch(err => {
-        return err.response ? console.log(err.response.data) : console.log(err);
+				return console.log(err.response.data || err);
       });
   }
 
@@ -60,7 +60,7 @@ class AlbumTile extends Component {
         return console.log(response.data);
       })
       .catch((err) => {
-        return err.response ? console.log(err.response.data) : console.log(err);
+				return console.log(err.response.data || err);
       });
   }
 
@@ -72,7 +72,7 @@ class AlbumTile extends Component {
 				return console.log(response.data);
 			})
 			.catch((err) => {
-				return err.response ? console.log(err.response.data) : console.log(err);
+				return console.log(err.response.data || err);
 			});
 	}
 

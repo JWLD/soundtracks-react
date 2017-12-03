@@ -20,7 +20,7 @@ class ArtistList extends Component {
         this.setState({ artists: response.data });
       })
       .catch((err) => {
-        return console.dir(err);
+				return console.log(err.response.data || err);
       });
   }
 
