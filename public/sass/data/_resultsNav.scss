@@ -1,0 +1,25 @@
+.album-results-nav {
+	@include flex;
+	margin-bottom: $sHalf;
+
+	span {
+		width: 95px;
+		margin: 0 40px;
+		font: 30px $fDataPage;
+		color: $cTextLight;
+	}
+
+	svg {
+		height: 60px;
+		width: 80px;
+		padding: 5px;
+
+		border-radius: 3px;
+		color: $cMain;
+		background-color: $cLight;
+
+		&:hover {
+			background-color: $cLighter;
+		}
+	}
+}
