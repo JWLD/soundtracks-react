@@ -1,8 +1,19 @@
 // GENERAL
+
 @import 'fonts';
 @import 'vars';
+@import 'mixins';
+@import 'reset';
 @import 'general';
 
-// COMPONENTS
-@import 'header';
-@import 'results';
+// MAIN PAGE
+
+@import 'main/searchBar';
+@import 'main/resultsList';
+
+// DATA ENTRY PAGE
+
+@import 'data/headerBar';
+@import 'data/artistResults';
+@import 'data/albumResults';
+@import 'data/resultsNav';

@@ -1,18 +1,3 @@
-// SIZE RESET
-
-body, header, h1, input, button, div, ul {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-// FLEX
-
-header, div, ul, a {
-  @include flex;
-}
-
 // GENERAL
 
 body {
@@ -20,12 +5,27 @@ body {
   background-color: #21252b;
 }
 
-button:hover, a:hover {
-  cursor: pointer;
+.data-page {
+  flex-direction: column;
+
+	& > div {
+		flex-direction: column;
+		width: 100vw;
+		padding: $sFull;
+	}
 }
 
 // UTILITY CLASSES
 
 .hide {
   display: none;
+}
+
+.inactive {
+  pointer-events: none;
+  cursor: default;
+
+	&.tile {
+		color: #444 !important;
+	}
 }

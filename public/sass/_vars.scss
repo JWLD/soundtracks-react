@@ -1,25 +1,19 @@
-// MIXINS
-
-@mixin flex() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 // SIZING
 
-$header-height: 72px;
-$tile-padding: 8px;
-$tile_2: calc((100vw - (3 * (#{$tile-padding} * 2))) / 2);
-$tile_3: calc((100vw - (4 * (#{$tile-padding} * 2))) / 3);
-$tile_4: calc((100vw - (5 * (#{$tile-padding} * 2))) / 4);
-$tile_5: calc((100vw - (6 * (#{$tile-padding} * 2))) / 5);
-$tile_6: calc((100vw - (7 * (#{$tile-padding} * 2))) / 6);
-$tile_7: calc((100vw - (8 * (#{$tile-padding} * 2))) / 7);
-$tile_8: calc((100vw - (9 * (#{$tile-padding} * 2))) / 8);
-$tile_9: calc((100vw - (10 * (#{$tile-padding} * 2))) / 9);
-$tile_10: calc((100vw - (11 * (#{$tile-padding} * 2))) / 10);
+$sHeaderHeight: 72px;
+$sFull: 30px;
+$sHalf: 15px;
 
 // COLOURS
 
-$text: #eee;
+$cTextLight: white;
+$cTextLightHover: #eee;
+
+$cMain: #21252b;
+$cLight: #373e48;
+$cLighter: #434b56;
+$cHover: goldenrod;
+
+// FONTS
+
+$fDataPage: Helvetica;

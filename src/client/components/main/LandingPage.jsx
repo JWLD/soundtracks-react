@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import SearchBar from '../components/SearchBar';
-import ArtistList from './ArtistList';
-import AlbumList from './AlbumList';
+import SearchBar from '../../containers/main/SearchBar';
+import ArtistList from '../../containers/main/ArtistList';
+import AlbumList from '../../containers/main/AlbumList';
 
 const Landing = () => (
   <div>

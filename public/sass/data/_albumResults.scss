@@ -1,0 +1,100 @@
+$sPanelPadding: 15px;
+$sAlbumImg: 250px - ($sPanelPadding * 2);
+
+.album-sctn {
+	flex-direction: column;
+
+  ul {
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.album-panel {
+  margin: $sHalf;
+  padding: $sPanelPadding;
+
+  border-radius: 3px;
+  background-color: $cLight;
+
+	&.added {
+		background-color: seagreen;
+	}
+}
+
+.album-panel__img-link {
+  height: $sAlbumImg;
+  width: $sAlbumImg;
+  margin-right: $sPanelPadding;
+
+  border-radius: 3px;
+  background-color: $cMain;
+  background-size: cover;
+  background-position: center;
+}
+
+.album-panel__input-wrap {
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: $sAlbumImg;
+  width: $sAlbumImg * 1.3;
+
+	> div {
+		position: relative;
+		width: 100%;
+	}
+
+	input {
+		height: 40px;
+		width: 100%;
+		padding: 10px;
+		margin-bottom: $sPanelPadding;
+
+		border-radius: 2px;
+		background-color: white;
+		font: 16px $fDataPage;
+	}
+
+}
+
+.album-panel__year-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	svg {
+		height: 30px;
+		width: 30px;
+		margin: 5px;
+		padding: 5px;
+
+		border-radius: 3px;
+		background-color: gray;
+		color: white;
+
+		&:hover {
+			color: $cHover;
+		}
+	}
+}
+
+.album-panel__db-btn {
+	flex-grow: 1;
+	width: 100%;
+
+	svg {
+		width: 75px;
+		height: 50px;
+		padding: 3px 25px 0 25px;
+
+		border-radius: 4px;
+		background-color: $cMain;
+		color: $cTextLight;
+
+		&:hover {
+			color: $cHover;
+		}
+	}
+}

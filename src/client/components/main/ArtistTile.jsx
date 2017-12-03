@@ -6,7 +6,7 @@ const ArtistTile = (props) => (
     <Link
       to={`/artists/${props.spotify_id}`}
       key={props.id}
-      className="results-sctn__result-tile"
+      className="results-sctn__tile"
       >{props.name}
     </Link>
   </li>
