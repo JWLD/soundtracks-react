@@ -4,11 +4,11 @@
   "description": "",
   "main": "server/start.js",
   "scripts": {
-		"start": "node src/server/start.js",
-		"dev": "npm run sass & webpack-dev-server & npm run server",
-		"build": "webpack",
-		"sass": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
-		"server": "nodemon --ignore ./src/client/ ./src/server/start.js"
+    "start": "node src/server/start.js",
+    "dev": "npm run sass & webpack-dev-server & npm run server",
+    "build": "webpack",
+    "sass": "./node_modules/.bin/node-sass --watch ./public/sass/main.scss ./public/style.css",
+    "server": "nodemon --ignore ./src/client/ ./src/server/start.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/JWLD/soundtracks-react#readme",
   "dependencies": {
+    "async": "^2.6.0",
     "axios": "^0.16.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
