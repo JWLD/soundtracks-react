@@ -32,7 +32,7 @@ class ArtistSearch extends Component {
           this.setState({ artists: response.data.artists.items });
         })
         .catch((err) => {
-          return console.log(err);
+          return console.log(err.response.data || err);
         });
     }
   }
@@ -48,7 +48,7 @@ class ArtistSearch extends Component {
         return console.log(response.data);
       })
       .catch((err) => {
-        return err.response ? console.log(err.response.data) : console.log(err);
+        return console.log(err.response.data || err);
       });
   }
 

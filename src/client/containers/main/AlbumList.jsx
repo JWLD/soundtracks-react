@@ -23,7 +23,7 @@ class AlbumList extends Component {
         });
       })
       .catch((err) => {
-				return console.dir(err);
+				return console.log(err.response.data || err);
       });
   }
 
