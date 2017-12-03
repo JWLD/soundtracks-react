@@ -1,0 +1,121 @@
+$sTileSpacing: 8px;
+$tile2: calc((100vw - (3 * (#{$sTileSpacing} * 2))) / 2);
+$tile3: calc((100vw - (4 * (#{$sTileSpacing} * 2))) / 3);
+$tile4: calc((100vw - (5 * (#{$sTileSpacing} * 2))) / 4);
+$tile5: calc((100vw - (6 * (#{$sTileSpacing} * 2))) / 5);
+$tile6: calc((100vw - (7 * (#{$sTileSpacing} * 2))) / 6);
+$tile7: calc((100vw - (8 * (#{$sTileSpacing} * 2))) / 7);
+$tile8: calc((100vw - (9 * (#{$sTileSpacing} * 2))) / 8);
+$tile9: calc((100vw - (10 * (#{$sTileSpacing} * 2))) / 9);
+$tile10: calc((100vw - (11 * (#{$sTileSpacing} * 2))) / 10);
+
+.results-sctn {
+	justify-content: flex-start;
+  min-width: 100vw;
+
+	ul {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+
+		padding: $sTileSpacing;
+		margin-top: $sHeaderHeight;
+
+		list-style: none;
+	}
+}
+
+.results-sctn__tile {
+  position: relative;
+
+  height: $tile2;
+  width: $tile2;
+	margin: $sTileSpacing;
+	background-size: cover;
+
+	border-radius: 2px;
+  background-color: #333;
+	color: $cTextLight;
+	font: 22px Dense;
+  box-shadow: 0 5px 15px -5px black;
+
+	&:hover {
+		background-color: #383838;
+
+		.results-sctn__tile-overlay {
+			display: flex;
+		}
+	}
+
+	.results-sctn__tile-overlay {
+		display: none;
+		position: absolute;
+		text-align: center;
+
+		height: 100%;
+		width: 100%;
+		padding: 8px;
+
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+// RESPONSIVE
+
+$base: 475px;
+$range: 175px;
+
+@media (min-width: $base) {
+  .results-sctn__tile {
+    width: $tile3;
+    height: $tile3;
+  }
+}
+
+@media (min-width: $base + #{$range}) {
+  .results-sctn__tile {
+    width: $tile4;
+    height: $tile4;
+  }
+}
+
+@media (min-width: $base + #{$range} * 2) {
+  .results-sctn__tile {
+    width: $tile5;
+    height: $tile5;
+  }
+}
+
+@media (min-width: $base + #{$range} * 3) {
+  .results-sctn__tile {
+    width: $tile6;
+    height: $tile6;
+  }
+}
+
+@media (min-width: $base + #{$range} * 4) {
+  .results-sctn__tile {
+    width: $tile7;
+    height: $tile7;
+  }
+}
+
+@media (min-width: $base + #{$range} * 5) {
+  .results-sctn__tile {
+    width: $tile8;
+    height: $tile8;
+  }
+}
+
+@media (min-width: $base + #{$range} * 6) {
+  .results-sctn__tile {
+    width: $tile9;
+    height: $tile9;
+  }
+}
+
+@media (min-width: $base + #{$range} * 7) {
+  .results-sctn__tile {
+    width: $tile10;
+    height: $tile10;
+  }
+}

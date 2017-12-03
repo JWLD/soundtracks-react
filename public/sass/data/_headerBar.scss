@@ -1,20 +1,28 @@
 .header-bar {
 	justify-content: space-between;
+
   width: 100vw;
+	height: $sHeaderHeight;
 	padding: 10px;
-  height: $headerHeight;
+
   background-color: $cLight;
 	box-shadow: 0 0 15px 1px black;
 }
 
 .header-bar__title {
 	margin-left: 5px;
-  font: bold 30px $fMain;
-  color: $cWhite;
+
+	color: $cTextLight;
+  font: bold 30px $fDataPage;
 }
 
 .header-bar__spotify-btn {
 	height: 100%;
-  color: $cWhite;
+
+	color: $cTextLight;
   font-size: 55px;
+
+	&:hover {
+		color: $cTextLightHover;
+	}
 }

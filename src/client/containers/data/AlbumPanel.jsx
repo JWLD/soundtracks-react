@@ -81,13 +81,13 @@ class AlbumTile extends Component {
 
     if (this.state.year) {
       const title = encodeURIComponent(this.state.title);
-      yearButton = <a href={`http://www.imdb.com/find?q=${title}`} target="_blank"><FaExternalLinkSquare /></a>
+      yearButton = <a className="album-panel__year-btn" href={`http://www.imdb.com/find?q=${title}`} target="_blank"><FaExternalLinkSquare /></a>
     } else {
-      yearButton = <a><FaDownload onClick={this.getAlbumDate} /></a>;
+      yearButton = <a className="album-panel__year-btn"><FaDownload onClick={this.getAlbumDate} /></a>;
     }
 
     const imgStyle = { backgroundImage: `url(${this.props.albumArt})` };
-		const tileClass = this.state.added ? 'album added' : 'album';
+		const panelClass = this.state.added ? 'album-panel added' : 'album-panel';
 		const plusClass = !this.state.year ? 'inactive tile' : '';
 
 		const dbButton = this.state.added
@@ -96,20 +96,20 @@ class AlbumTile extends Component {
 
     return (
       <li>
-        <div className={tileClass}>
+        <div className={panelClass}>
           <a
-            className="album__img"
+            className="album-panel__img-link"
             style={imgStyle}
             href={this.props.external_urls.spotify}
             target="_blank">
           </a>
-          <div className="album__input-wrap">
+          <div className="album-panel__input-wrap">
             <input name="title" onChange={this.onInputChange} value={this.state.title} />
-            <div className="album__year-wrap">
+            <div>
               <input name="year" onChange={this.onInputChange} value={this.state.year} placeholder="Year" />
               {yearButton}
             </div>
-            <div className="album__button-wrap">
+            <div className="album-panel__db-btn">
 							{dbButton}
             </div>
           </div>

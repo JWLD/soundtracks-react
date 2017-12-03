@@ -61,7 +61,7 @@ class ArtistSearch extends Component {
 
       if (artist) {
         const url = artist.images[1] ? artist.images[1].url : null;
-        const boxClass = artist.id === this.props.artist ? 'artist-sctn__box selected' : 'artist-sctn__box';
+        const boxClass = artist.id === this.props.artist ? 'artist-sctn__panel selected' : 'artist-sctn__panel';
         const photoStyle = { backgroundImage: `url(${url})` };
         const name = artist.name.slice(0, 25);
 
@@ -73,7 +73,7 @@ class ArtistSearch extends Component {
         );
       } else {
         artists[i] = (
-          <button className="artist-sctn__box" key={i}>
+          <button className="artist-sctn__panel" key={i}>
             <div></div>
             <span>~</span>
           </button>
@@ -82,7 +82,7 @@ class ArtistSearch extends Component {
     }
 
     return (
-      <section className="artist-sctn">
+      <section className="data-artists-sctn">
         <input
           onKeyDown={this.onKeyDown}
           onChange={this.onInputChange}
@@ -91,7 +91,7 @@ class ArtistSearch extends Component {
           autoComplete="off"
         />
 
-        <div className="artist-sctn__box-wrap">
+        <div>
           {artists}
         </div>
       </section>

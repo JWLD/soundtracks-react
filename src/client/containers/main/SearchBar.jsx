@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
-import FaClose from 'react-icons/lib/fa/close';
-import FaPlus from 'react-icons/lib/fa/plus';
 import { connect } from 'react-redux';
 import Axios from 'axios';
+import FaTimesCircle from 'react-icons/lib/fa/times-circle';
+import FaPlus from 'react-icons/lib/fa/plus';
 
 import { setSearchTerm, setResults } from '../../redux/actions';
 
 const SearchBar = (props) => {
-  const iconClass = props.searchTerm ? 'page-hdr__reset-btn' : 'hide';
+  const resetBtnClass = props.searchTerm ? 'search-bar__reset-btn' : 'hide';
 
   return (
-    <header className='page-hdr'>
+    <header className="search-bar">
 			<div>
 				<input
-					className='page-hdr__input'
+					className="search-bar__input"
 					value={props.searchTerm}
 					onChange={props.onSearchTermChange}
-					placeholder='Search'
+					placeholder="Search"
 				/>
-				<div className='page-hdr__reset-wrap'>
-					<FaClose
-						className={iconClass}
-						onClick={props.clearSearch}
-					/>
-				</div>
+				<FaTimesCircle
+					className={resetBtnClass}
+					onClick={props.clearSearch}
+				/>
 			</div>
-			<a href="/add"><FaPlus /></a>
+			<a className="search-bar__data-link" href="/add"><FaPlus /></a>
     </header>
   );
 };
