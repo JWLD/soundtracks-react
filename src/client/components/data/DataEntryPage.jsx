@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeaderBar from './HeaderBar';
+import HeaderBar from '../../containers/data/HeaderBar';
 import ArtistSearch from '../../containers/data/ArtistSearch';
 import AlbumList from '../../containers/data/AlbumList';
 

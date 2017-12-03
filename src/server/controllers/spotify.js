@@ -15,6 +15,12 @@ spotifyController.artists = (req, res) => {
   Request(options, (error, response, body) => {
     if (error) return res.status(500).send(`Error searching Spotify for artists: ${error}`);
 
+		const result = JSON.parse(body);
+
+		if (result.error) return res
+			.status(result.error.status)
+			.send(`Error searching Spotify for artists: ${result.error.message}`);
+
     return res.send(body);
   });
 };

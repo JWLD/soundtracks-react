@@ -10,6 +10,7 @@ const AlbumResultsNav = (props) => {
 	const pageCount = Math.ceil(props.data.total / props.data.limit);
 	const currentPage = (props.data.offset / props.data.limit) + 1;
 
+	// set button display and interactivity depending on position in results
 	let leftArrow;
 	let rightArrow;
 

@@ -40,7 +40,7 @@ class AlbumList extends Component {
         });
       })
       .catch((err) => {
-        return err.response ? console.log(err.response.data) : console.log(err);
+				return console.log(err.response.data || err);
       });
   }
 
