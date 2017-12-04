@@ -8,7 +8,7 @@ const authController = module.exports = {};
 authController.login = (req, res) => {
 	const referer = req.headers.host === 'localhost:8080'
 		? 'http://localhost:8080'
-		: 'https://soundtracks-data.herokuapp.com';
+		: 'https://soundtracks.herokuapp.com';
 
   const queries = querystring.stringify({
     client_id: process.env.SPOTIFY_ID,
@@ -23,7 +23,7 @@ authController.login = (req, res) => {
 authController.redirect = (req, res) => {
 	const referer = req.headers.host === 'localhost:8080'
 		? 'http://localhost:8080'
-		: 'https://soundtracks-data.herokuapp.com';
+		: 'https://soundtracks.herokuapp.com';
 
   const data = {
     grant_type: 'authorization_code',
@@ -45,7 +45,7 @@ authController.redirect = (req, res) => {
 
 		const destination = req.headers.host === 'localhost:8080'
 			? 'http://localhost:8080/add'
-			: 'https://soundtracks-data.herokuapp.com/add';
+			: 'https://soundtracks.herokuapp.com/add';
 
     // create JWT and return as cookie
     const token = jsonWebToken.sign(body, process.env.SECRET);
