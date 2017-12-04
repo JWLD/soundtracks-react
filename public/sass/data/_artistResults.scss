@@ -30,7 +30,7 @@ $panelSize: 250px;
   padding: 8px;
 
 	border-radius: 3px;
-  background-color: $cLight;
+  background-color: $c2;
 
 	&.selected {
 		background-color: $cTextLight;
@@ -42,7 +42,7 @@ $panelSize: 250px;
 
 	&:not(.selected):hover {
 		cursor: pointer;
-		background-color: $cLighter;
+		background-color: $c3;
 	}
 
 	div {
@@ -50,7 +50,7 @@ $panelSize: 250px;
 		height: $panelSize - 16px;
 
 		border-radius: 3px;
-		background-color: $cMain;
+		background-color: $c0;
 		background-size: cover;
 		background-position: center;
 	}

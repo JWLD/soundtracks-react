@@ -16,7 +16,7 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
   padding: $sPanelPadding;
 
   border-radius: 3px;
-  background-color: $cLight;
+  background-color: $c2;
 
 	&.added {
 		background-color: seagreen;
@@ -29,7 +29,7 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
   margin-right: $sPanelPadding;
 
   border-radius: 3px;
-  background-color: $cMain;
+  background-color: $c0;
   background-size: cover;
   background-position: center;
 }
@@ -90,7 +90,7 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
 		padding: 3px 25px 0 25px;
 
 		border-radius: 4px;
-		background-color: $cMain;
+		background-color: $c0;
 		color: $cTextLight;
 
 		&:hover {

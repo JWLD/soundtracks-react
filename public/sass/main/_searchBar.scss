@@ -10,7 +10,7 @@ $pSearchBar: 8px;
   width: 100vw;
   padding: $pSearchBar;
 
-  background-color: #383d47;
+	background-color: $c2;
   box-shadow: 0 0 15px 1px black;
 
 	& > div {
@@ -54,7 +54,7 @@ $pSearchBar: 8px;
 
 	border-radius: 2px;
 	color: white;
-	background-color: #21252b;
+	background-color: $c0;
 
 	&:hover {
 		background-color: #2d3139;
