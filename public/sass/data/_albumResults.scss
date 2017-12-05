@@ -1,5 +1,5 @@
-$sPanelPadding: 15px;
-$sAlbumImg: 250px - ($sPanelPadding * 2);
+$sPanelPadding: 1.5rem;
+$sAlbumImg: 25rem - ($sPanelPadding * 2);
 
 .album-sctn {
 	flex-direction: column;
@@ -15,7 +15,7 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
   margin: $sHalf;
   padding: $sPanelPadding;
 
-  border-radius: 3px;
+  border-radius: .3rem;
   background-color: $c2;
 
 	&.added {
@@ -28,7 +28,7 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
   width: $sAlbumImg;
   margin-right: $sPanelPadding;
 
-  border-radius: 3px;
+  border-radius: .3rem;
   background-color: $c0;
   background-size: cover;
   background-position: center;
@@ -47,14 +47,14 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
 	}
 
 	input {
-		height: 40px;
+		height: 4rem;
 		width: 100%;
-		padding: 10px;
+		padding: 1rem;
 		margin-bottom: $sPanelPadding;
 
-		border-radius: 2px;
+		border-radius: .2rem;
 		background-color: white;
-		font: 16px $fDataPage;
+		font: 1.6rem $fDataPage;
 	}
 
 }
@@ -65,12 +65,12 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
 	right: 0;
 
 	svg {
-		height: 30px;
-		width: 30px;
-		margin: 5px;
-		padding: 5px;
+		height: 3rem;
+		width: 3rem;
+		margin: .5rem;
+		padding: .5rem;
 
-		border-radius: 3px;
+		border-radius: .3rem;
 		background-color: gray;
 		color: white;
 
@@ -85,11 +85,11 @@ $sAlbumImg: 250px - ($sPanelPadding * 2);
 	width: 100%;
 
 	svg {
-		width: 75px;
-		height: 50px;
-		padding: 3px 25px 0 25px;
+		width: 7.5rem;
+		height: 5rem;
+		padding: .3rem 2.5rem 0 2.5rem;
 
-		border-radius: 4px;
+		border-radius: .3rem;
 		background-color: $c0;
 		color: $cTextLight;
 

@@ -1,4 +1,4 @@
-$panelSize: 250px;
+$panelSize: 25rem;
 
 .data-artists-sctn {
 	flex-direction: column;
@@ -6,12 +6,12 @@ $panelSize: 250px;
 
 	input {
 	  width: ($panelSize * 3) + ($sFull * 2);
-	  height: 48px;
+	  height: 4.8rem;
 		margin-bottom: $sFull;
-		padding: 12px;
+		padding: 1.2rem;
 
-		border-radius: 3px;
-	  font: 20px $fDataPage;
+		border-radius: .3rem;
+	  font: 2rem $fDataPage;
 		text-transform: capitalize;
 	  background-color: $cTextLight;
 	}
@@ -27,9 +27,9 @@ $panelSize: 250px;
   flex-direction: column;
 
 	width: $panelSize;
-  padding: 8px;
+  padding: .8rem;
 
-	border-radius: 3px;
+	border-radius: .3rem;
   background-color: $c2;
 
 	&.selected {
@@ -46,10 +46,10 @@ $panelSize: 250px;
 	}
 
 	div {
-		width: $panelSize - 16px;
-		height: $panelSize - 16px;
+		width: $panelSize - 1.6rem;
+		height: $panelSize - 1.6rem;
 
-		border-radius: 3px;
+		border-radius: .3rem;
 		background-color: $c0;
 		background-size: cover;
 		background-position: center;
@@ -57,9 +57,9 @@ $panelSize: 250px;
 
 	span {
 		width: 100%;
-		padding: 12px 0 4px 0;
+		padding: 1.2rem 0 .4rem 0;
 
 		color: $cTextLight;
-		font: 15px $fDataPage;
+		font: 1.5rem $fDataPage;
 	}
 }
