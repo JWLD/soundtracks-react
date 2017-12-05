@@ -8,6 +8,10 @@ a, body, button, div, h1, header, input, section, span, svg, ul {
   border-radius: 0;
 }
 
+html {
+	font-size: 62.5%; // 1rem = 10px
+}
+
 a {
 	text-decoration: none;
 }

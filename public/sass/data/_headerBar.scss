@@ -3,24 +3,24 @@
 
   width: 100vw;
 	height: $sHeaderHeight;
-	padding: 10px;
+	padding: 1rem;
 
   background-color: $c2;
-	box-shadow: 0 0 15px 1px black;
+	box-shadow: 0 0 1.5rem .1rem black;
 }
 
 .header-bar__title {
-	margin-left: 5px;
+	margin-left: .5rem;
 
 	color: $cTextLight;
-  font: bold 30px $fDataPage;
+  font: bold 3rem $fDataPage;
 }
 
 .header-bar__spotify-btn {
 	height: 100%;
 
 	color: $cTextLight;
-  font-size: 55px;
+  font-size: 5.5rem;
 
 	&:hover {
 		color: $cTextLightHover;
