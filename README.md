@@ -8,7 +8,7 @@ I wanted to create an app where the user can browse a comprehensive list of film
 The app also contains a data entry system where the user can source data from Spotify to be displayed in the main part of the app. Currently this app only makes use of the Spotify API, but the plan is to incorporate other data sources such as Discogs and MusicBrainz in the future.
 
 ### How do I use it?
-The landing page renders a list of artists where the user can click through to a list of their albums, linked up to Spotify. All of the data on this page is entered into the app through a data entry systen, accessible via the plus button in the top right.
+The landing page renders a list of artists where the user can click through to a list of their albums, linked up to Spotify. All of the data on this page is entered into the app through a data entry system, accessible via the plus button in the top right.
 
 Spotify authentication is required to use the data entry page - click the icon in the top right to log in. Then search for and select an artist from the list of results, and choose which albums you want to add to the app. The album year field has to be filled out by clicking the button within the field itself.
 
