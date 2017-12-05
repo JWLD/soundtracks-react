@@ -1,4 +1,4 @@
-$sTileSpacing: 8px;
+$sTileSpacing: .8rem;
 $tile2: calc((100vw - (3 * (#{$sTileSpacing} * 2))) / 2);
 $tile3: calc((100vw - (4 * (#{$sTileSpacing} * 2))) / 3);
 $tile4: calc((100vw - (5 * (#{$sTileSpacing} * 2))) / 4);
@@ -32,11 +32,11 @@ $tile10: calc((100vw - (11 * (#{$sTileSpacing} * 2))) / 10);
 	margin: $sTileSpacing;
 	background-size: cover;
 
-	border-radius: 2px;
+	border-radius: .2rem;
   background-color: #333;
 	color: $cTextLight;
-	font: 22px Dense;
-  box-shadow: 0 5px 15px -5px black;
+	font: 2.2rem Dense;
+  box-shadow: 0 .5rem 1.5rem -.5rem black;
 
 	&:hover {
 		background-color: #383838;
@@ -53,7 +53,7 @@ $tile10: calc((100vw - (11 * (#{$sTileSpacing} * 2))) / 10);
 
 		height: 100%;
 		width: 100%;
-		padding: 8px;
+		padding: .8rem;
 
 		background-color: rgba(0, 0, 0, 0.5);
 	}
@@ -61,8 +61,8 @@ $tile10: calc((100vw - (11 * (#{$sTileSpacing} * 2))) / 10);
 
 // RESPONSIVE
 
-$base: 475px;
-$range: 175px;
+$base: 35rem;
+$range: 11rem;
 
 @media (min-width: $base) {
   .results-sctn__tile {

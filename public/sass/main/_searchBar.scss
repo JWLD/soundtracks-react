@@ -1,4 +1,4 @@
-$pSearchBar: 8px;
+$pSearchBar: .8rem;
 
 .search-bar {
   position: fixed;
@@ -11,7 +11,7 @@ $pSearchBar: 8px;
   padding: $pSearchBar;
 
 	background-color: $c2;
-  box-shadow: 0 0 15px 1px black;
+  box-shadow: 0 0 1.5rem .1rem black;
 
 	& > div {
 		position: relative;
@@ -22,12 +22,12 @@ $pSearchBar: 8px;
 .search-bar__input {
 	flex-grow: 1;
 	height: $sHeaderHeight - ($pSearchBar * 2);
-	padding: 10px;
+	padding: 1rem;
 
-	border-radius: 2px;
+	border-radius: .2rem;
 	background-color: #4f5664;
 	color: $cTextLight;
-	font: 34px Dense;
+	font: 3.4rem Dense;
 
 	&::placeholder {
 		color: #aaa;
@@ -36,10 +36,10 @@ $pSearchBar: 8px;
 
 .search-bar__reset-btn {
 	position: absolute;
-	right: 10px;
+	right: 1rem;
 
-	height: 30px;
-	width: 30px;
+	height: 3rem;
+	width: 3rem;
 	color: #aaa;
 
 	&:hover {
@@ -52,7 +52,7 @@ $pSearchBar: 8px;
 	height: 100%;
 	margin-left: $pSearchBar;
 
-	border-radius: 2px;
+	border-radius: .2rem;
 	color: white;
 	background-color: $c0;
 
@@ -61,6 +61,6 @@ $pSearchBar: 8px;
 	}
 
 	svg {
-		font-size: 25px;
+		font-size: 2.5rem;
 	}
 }
