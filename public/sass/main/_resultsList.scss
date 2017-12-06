@@ -61,8 +61,8 @@ $tile10: calc((100vw - (11 * (#{$sTileSpacing} * 2))) / 10);
 
 // RESPONSIVE
 
-$base: 35rem;
-$range: 11rem;
+$base: 475px;
+$range: 175px;
 
 @media (min-width: $base) {
   .results-sctn__tile {
