@@ -1,4 +1,4 @@
-$sTileSpacing: .8rem;
+$sTileSpacing: 8px;
 $tile2: calc((100vw - (3 * (#{$sTileSpacing} * 2))) / 2);
 $tile3: calc((100vw - (4 * (#{$sTileSpacing} * 2))) / 3);
 $tile4: calc((100vw - (5 * (#{$sTileSpacing} * 2))) / 4);
