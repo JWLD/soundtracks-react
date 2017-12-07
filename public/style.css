@@ -98,15 +98,15 @@ body {
   .results-sctn ul {
     justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 8px;
+    padding: 0.8rem;
     margin-top: 7.2rem;
     list-style: none; }
 
 .results-sctn__tile {
   position: relative;
-  height: calc((100vw - (3 * (8px * 2))) / 2);
-  width: calc((100vw - (3 * (8px * 2))) / 2);
-  margin: 8px;
+  height: calc((100vw - (3 * (0.8rem * 2))) / 2);
+  width: calc((100vw - (3 * (0.8rem * 2))) / 2);
+  margin: 0.8rem;
   background-size: cover;
   border-radius: .2rem;
   background-color: #333;
@@ -128,43 +128,43 @@ body {
 
 @media (min-width: 475px) {
   .results-sctn__tile {
-    width: calc((100vw - (4 * (8px * 2))) / 3);
-    height: calc((100vw - (4 * (8px * 2))) / 3); } }
+    width: calc((100vw - (4 * (0.8rem * 2))) / 3);
+    height: calc((100vw - (4 * (0.8rem * 2))) / 3); } }
 
 @media (min-width: 650px) {
   .results-sctn__tile {
-    width: calc((100vw - (5 * (8px * 2))) / 4);
-    height: calc((100vw - (5 * (8px * 2))) / 4); } }
+    width: calc((100vw - (5 * (0.8rem * 2))) / 4);
+    height: calc((100vw - (5 * (0.8rem * 2))) / 4); } }
 
 @media (min-width: 825px) {
   .results-sctn__tile {
-    width: calc((100vw - (6 * (8px * 2))) / 5);
-    height: calc((100vw - (6 * (8px * 2))) / 5); } }
+    width: calc((100vw - (6 * (0.8rem * 2))) / 5);
+    height: calc((100vw - (6 * (0.8rem * 2))) / 5); } }
 
 @media (min-width: 1000px) {
   .results-sctn__tile {
-    width: calc((100vw - (7 * (8px * 2))) / 6);
-    height: calc((100vw - (7 * (8px * 2))) / 6); } }
+    width: calc((100vw - (7 * (0.8rem * 2))) / 6);
+    height: calc((100vw - (7 * (0.8rem * 2))) / 6); } }
 
 @media (min-width: 1175px) {
   .results-sctn__tile {
-    width: calc((100vw - (8 * (8px * 2))) / 7);
-    height: calc((100vw - (8 * (8px * 2))) / 7); } }
+    width: calc((100vw - (8 * (0.8rem * 2))) / 7);
+    height: calc((100vw - (8 * (0.8rem * 2))) / 7); } }
 
 @media (min-width: 1350px) {
   .results-sctn__tile {
-    width: calc((100vw - (9 * (8px * 2))) / 8);
-    height: calc((100vw - (9 * (8px * 2))) / 8); } }
+    width: calc((100vw - (9 * (0.8rem * 2))) / 8);
+    height: calc((100vw - (9 * (0.8rem * 2))) / 8); } }
 
 @media (min-width: 1525px) {
   .results-sctn__tile {
-    width: calc((100vw - (10 * (8px * 2))) / 9);
-    height: calc((100vw - (10 * (8px * 2))) / 9); } }
+    width: calc((100vw - (10 * (0.8rem * 2))) / 9);
+    height: calc((100vw - (10 * (0.8rem * 2))) / 9); } }
 
 @media (min-width: 1700px) {
   .results-sctn__tile {
-    width: calc((100vw - (11 * (8px * 2))) / 10);
-    height: calc((100vw - (11 * (8px * 2))) / 10); } }
+    width: calc((100vw - (11 * (0.8rem * 2))) / 10);
+    height: calc((100vw - (11 * (0.8rem * 2))) / 10); } }
 
 .header-bar {
   justify-content: space-between;
